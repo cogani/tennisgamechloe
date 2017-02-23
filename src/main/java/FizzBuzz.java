@@ -2,7 +2,8 @@
  * Created by nico on 23/02/17.
  */
 public class FizzBuzz {
-    public String calculate(int number) {
+
+    public static String calculate(int number) {
         String result = "";
 
         if (number % 3 == 0) {
