@@ -32,4 +32,14 @@ public class FizzBuzzTest {
         assertEquals("Fizz", result);
     }
 
+    @Test
+    public void givenNumberDivisibleBy5_whenCalculateIsInvoked_ThenFizzIsReturned() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int suppliedNumber = 5;
+
+        String result = fizzBuzz.calculate(suppliedNumber);
+
+        assertEquals("Buzz", result);
+    }
+
 }
