@@ -32,4 +32,34 @@ public class FizzBuzzTest {
         assertEquals(Integer.toString(suppliedNumber), result);
     }
 
+    @Test
+    public void whenWeReceive3_ThenWeAreGonnaReturnFizz() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int suppliedNumber = 3;
+
+        String result = fizzBuzz.calculate(suppliedNumber);
+
+        assertEquals("Fizz", result);
+    }
+
+    @Test
+    public void whenWeReceive6_ThenWeAreGonnaReturnFizz() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int suppliedNumber = 6;
+
+        String result = fizzBuzz.calculate(suppliedNumber);
+
+        assertEquals("Fizz", result);
+    }
+
+    @Test
+    public void whenWeReceive9_ThenWeAreGonnaReturnFizz() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int suppliedNumber = 9;
+
+        String result = fizzBuzz.calculate(suppliedNumber);
+
+        assertEquals("Fizz", result);
+    }
+
 }
