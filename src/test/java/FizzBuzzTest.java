@@ -42,4 +42,14 @@ public class FizzBuzzTest {
         assertEquals("Buzz", result);
     }
 
+    @Test
+    public void givenNumberDivisibleBy3And5_whenCalculateIsInvoked_ThenFizzBuzzIsReturned() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        int suppliedNumber = 15;
+
+        String result = fizzBuzz.calculate(suppliedNumber);
+
+        assertEquals("FizzBuzz", result);
+    }
+
 }

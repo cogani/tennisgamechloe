@@ -3,11 +3,20 @@
  */
 public class FizzBuzz {
     public String calculate(int number) {
+        String result = "";
+
         if (number % 3 == 0) {
-            return "Fizz";
-        } else if (number % 5 == 0) {
-            return "Buzz";
+            result = "Fizz";
         }
-        return Integer.toString(number);
+
+        if (number % 5 == 0) {
+            result = result + "Buzz";
+        }
+
+        if (result.length() == 0) {
+            result = Integer.toString(number);
+        }
+
+        return result;
     }
 }
