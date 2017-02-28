@@ -4,19 +4,11 @@
 public class FizzBuzz {
 
     public static String calculate(int number) {
-        String result = "";
+        String result = Integer.toString(number);
 
-        if (number % 3 == 0) {
-            result = "Fizz";
-        }
-
-        if (number % 5 == 0) {
-            result = result + "Buzz";
-        }
-
-        if (result.length() == 0) {
-            result = Integer.toString(number);
-        }
+        if (number % 15 == 0) result = "FizzBuzz";
+        else if (number % 3 == 0) result = "Fizz";
+        else if (number % 5 == 0) result = "Buzz";
 
         return result;
     }
