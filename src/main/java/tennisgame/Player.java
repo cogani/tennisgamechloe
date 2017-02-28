@@ -5,12 +5,13 @@
 package tennisgame;
 
 public class Player {
+    private final String name;
     private String[] scores = {"love", "fifteen", "thirty", "forty"};
-
 
     private int scoresIndex;
 
-    public Player() {
+    public Player(String name) {
+        this.name = name;
         scoresIndex = 0;
     }
 
@@ -24,5 +25,9 @@ public class Player {
 
     public int getScoresIndex() {
         return scoresIndex;
+    }
+
+    public String getName() {
+        return name;
     }
 }

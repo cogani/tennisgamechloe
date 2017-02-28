@@ -14,24 +14,25 @@ public class TennisGame {
     }
 
     public String getScore() {
-
-        if (player1.getScoresIndex() >= 3 && player2.getScoresIndex() == 3) {
-            return "deuce";
+        if (player1.getScoresIndex() >= 3 && player2.getScoresIndex() >= 3) {
+            if (Math.abs(player2.getScoresIndex() - player1.getScoresIndex()) >= 2) {
+                return getLeadPlayer().getName() + " won";
+            } else if (player1.getScoresIndex() == player2.getScoresIndex()) {
+                return "deuce";
+            } else {
+                return "advantage " + getLeadPlayer().getName();
+            }
+        } else {
+            if (Math.abs(player2.getScoresIndex() - player1.getScoresIndex()) >= 2) {
+                return "Win " + getLeadPlayer().getName();
+            } else {
+                return player1.getScore() + ", " + player2.getScore();
+            }
         }
-        if (player1.getScoresIndex() < 3 && player2.getScoresIndex() < 3) {
-            return player1.getScore() + "," + player2.getScore();
-        }
-        // Advantage situation
-        if (player1.getScoresIndex() >= player2.getScoresIndex() + 1)
-            return "Advantage for p1";
-        else if (player2.getScoresIndex() >= player1.getScoresIndex() + 1)
-            return "Advantage for p2";
-
-        // Advantage situation
-        if (player1.getScoresIndex() == player2.getScoresIndex())
-            return "deuce";
-
-
-        else return player1.getScore() + "," + player2.getScore();
     }
+
+    public Player getLeadPlayer() {
+        return (player1.getScoresIndex() > player2.getScoresIndex()) ? player1 : player2;
+    }
+
 }

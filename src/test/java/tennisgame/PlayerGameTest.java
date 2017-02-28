@@ -17,7 +17,7 @@ public class PlayerGameTest {
          A - Assert
          */
         String result = "love";
-        Player player = new Player();
+        Player player = new Player("Player");
 
         // Not Act section
 
@@ -28,7 +28,7 @@ public class PlayerGameTest {
     @Test
     public void givenAPlayerWithLoveAScorePoint_WhenScoreIsQueried_ThenResultWillBeFifteen() {
         String result = "fifteen";
-        Player player = new Player();
+        Player player = new Player("Player");
 
         player.score();
 
@@ -38,7 +38,7 @@ public class PlayerGameTest {
     @Test
     public void givenAPlayerWithFifteenScorePoint_WhenScoreIsQueried_ThenResultWillBeThirty() {
         String result = "thirty";
-        Player player = new Player();
+        Player player = new Player("Player");
 
         player.score();
         player.score();
@@ -49,7 +49,7 @@ public class PlayerGameTest {
     @Test
     public void givenAPlayerWithThirtyScorePoint_WhenScoreIsQueried_ThenResultWillBeForty() {
         String result = "forty";
-        Player player = new Player();
+        Player player = new Player("Player");
 
         player.score();
         player.score();
