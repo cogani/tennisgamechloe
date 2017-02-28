@@ -1,8 +1,13 @@
 /**
  * Created by nico on 28/02/17.
  */
+
+package tennisgame;
+
 public class Player {
     private String[] scores = {"love", "fifteen", "thirty", "forty"};
+
+
     private int scoresIndex;
 
     public Player() {
@@ -15,5 +20,9 @@ public class Player {
 
     public void score() {
         scoresIndex++;
+    }
+
+    public int getScoresIndex() {
+        return scoresIndex;
     }
 }

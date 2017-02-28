@@ -1,3 +1,5 @@
+package tennisgame;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -5,7 +7,7 @@ import static org.junit.Assert.*;
 /**
  * Created by nico on 28/02/17.
  */
-public class TennisGameTest {
+public class PlayerGameTest {
 
     @Test
     public void givenAPlayerWithNoScorePoints_WhenScoreIsQueried_ThenResultWillBeLove() {
@@ -55,6 +57,5 @@ public class TennisGameTest {
 
         assertEquals(result, player.getScore());
     }
-
 
 }
